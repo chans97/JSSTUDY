@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chan's Bomb</title>
+    <link rel="stylesheet" href="./basic.css">
+    <script defer>
+    </script>
+</head>
+
+<body>
+
+    <div>
+        <span id="text"></span>
+        <div>
+            <input type="number" id="row">
+        </div>
+        <div>
+            <span>행 : </span>
+            <input type="number" name="" id="col">
+
+        </div>
+
+        <input type="number" name="" id="bomb">
+        <input type="button" id="start" value="사용자 설정 게임 시작">
+    </div>
+</body>
+<script>
+    document.querySelector("#start").addEventListener("click", () => {
+        let row = document.querySelector("#row").value;
+        let col = document.querySelector("#col").value;
+        let bomb = document.querySelector("#bomb").value;
+        load = () => {
+            opener.bombGame(opener.document.body, row, col, bomb);
+            console.log(opener.bombGame, opener.document.body)
+        }
+        opener.location.reload()
+        window.close();
+    })
+</script>
+
+</html>
